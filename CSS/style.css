@@ -1,3 +1,9 @@
+/* Variables */
+:root {
+    --main-color: #dd5891;
+}
+
+/* End of variables */
 /* Global Rules */
 * {
     -webkit-box-sizing: border-box;
@@ -13,6 +19,7 @@ html {
 
 body {
     font-family: 'Arvo', serif;
+    background-color: black;
 }
 
 ul {
@@ -50,10 +57,10 @@ ul {
 /*End Of Global Rules */
 
 /* Header */
-header {
+/* header {
     padding: 40px;
 
-}
+} */
 
 header .container {
     justify-content: space-between;
@@ -67,17 +74,69 @@ header .container::after {
     position: absolute;
     width: calc(100% - 30px);
     height: 1px;
-    background-color: #a2a2a2;
-    bottom: -10px;
+    background-color: #687c86;
+    bottom: 10px;
     left: 20px;
+    z-index: -1;
 }
 
 .logo {
-    width: 90px;
+    width: 60px;
+    position: absolute;
+    top: 22px;
+    left: 13px;
 }
+
+header .container img {}
 
 header .container nav {
     flex: 1;
+}
+
+header .container nav ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: baseline;
+
+}
+
+header .container nav ul li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.5s;
+    padding-left: 7px;
+    padding-right: 7px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding-bottom: 32px;
+}
+
+header .container nav ul li a:active,
+header .container nav ul li a:hover {
+    color: var(--main-color);
+    border-bottom: 1px solid var(--main-color);
+
+}
+
+header .container nav ul .form {
+    display: block;
+    padding: 40px 0px 40px 20px;
+}
+
+header .container nav ul div i {
+    color: white;
+    transition: 0.5s;
+    border-left: 1px solid white;
+    padding-left: 20px;
+}
+
+header .container nav ul div i:active,
+header .container nav ul div i:hover {
+    color: var(--main-color);
+    cursor: pointer;
+    border-left-color: var(--main-color);
 }
 
 /* End of header */
